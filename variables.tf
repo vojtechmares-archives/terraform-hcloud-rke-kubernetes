@@ -31,3 +31,9 @@ variable "kubernetes_version" {
 variable "kubernetes_cluster_name" {
   type = string
 }
+variable "kubernetes_upgrade_strategy_drain" {
+  type = bool
+}
+variable "kubernetes_upgrade_strategy_max_unavailable_workers" {
+  type = string
+}

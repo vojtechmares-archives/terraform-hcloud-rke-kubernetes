@@ -11,6 +11,11 @@ resource "rke_cluster" "cluster" {
 
   ssh_agent_auth = true
 
+  upgrade_strategy {
+    drain                  = var.kubernetes_upgrade_strategy_drain
+    max_unavailable_worker = var.kubernetes_upgrade_strategy_max_unavailable_workers
+  }
+
   dynamic "nodes" {
     for_each = hcloud_server.nodes
     content {
