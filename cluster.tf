@@ -9,6 +9,8 @@ resource "rke_cluster" "cluster" {
 
   cluster_name = var.kubernetes_cluster_name
 
+  ssh_agent_auth = true
+
   dynamic "nodes" {
     for_each = hcloud_server.nodes
     content {
