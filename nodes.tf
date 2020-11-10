@@ -10,5 +10,5 @@ resource "hcloud_server" "nodes" {
 }
 
 data "template_file" "docker" {
-  template = file("./docker-cloud-init.yaml")
+  template = file("${path.module}/docker-cloud-init.yaml")
 }
