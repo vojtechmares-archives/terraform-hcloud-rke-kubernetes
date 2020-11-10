@@ -22,20 +22,19 @@ This module currently supports only Terraform `0.13`.
 A Kubernetes cluster can be provisioned by creating a `main.tf` file in an empty directory with the following content, do not forget to configure all the variables - they are all required.
 
 ```hcl
-module "kubernetes" {
-  source = "vojtechmares/hcloud-rke-kubernetes"
+module "rke-kubernetes" {
+  source  = "vojtechmares/rke-kubernetes/hcloud"
   version = "0.1.0"
-
-  // variables ...
+  # insert the 12 required variables here
 }
 
 output "kubeconfig" {
-  value     = module.kubernetes.kube_config_yaml
+  value     = module.rke-kubernetes.kube_config_yaml
   sensitive = true
 }
 
 output "lbipv4" {
-  value = module.kubernetes.load_balancer_ipv4
+  value = module.rke-kubernetes.load_balancer_ipv4
 }
 ```
 
