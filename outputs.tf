@@ -1,0 +1,8 @@
+output "load_balancer_ipv4" {
+  value = hcloud_load_balancer.lb.ipv4
+}
+
+output "kube_config_yaml" {
+  value     = rke_cluster.cluster.kube_config_yaml
+  sensitive = true
+}
