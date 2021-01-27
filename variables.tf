@@ -49,3 +49,7 @@ variable "kubernetes_upgrade_strategy_max_unavailable_workers" {
   type        = string
   description = "Maximum of Kubernetes unavailable workers"
 }
+variable "kubernetes_authorization" {
+  type        = string
+  description = "Authorization method for Kubernetes (`rbac` or `none`)"
+}

@@ -58,7 +58,7 @@ resource "rke_cluster" "cluster" {
   }
 
   authorization {
-    mode = "rbac"
+    mode = var.kubernetes_authorization
   }
 
   network {
