@@ -5,7 +5,7 @@ Terraform module for creating and managing Kubernetes clusters with RKE on Hetzn
 
 - [What is a Terraform module](#what-is-a-terraform-module)
 - [How do you use this module](#how-do-you-use-this-module)
- - [Kubernetes cluster provisioning](#kubernetes-cluster-provisioning)
+- [Kubernetes cluster provisioning](#kubernetes-cluster-provisioning)
 
 <!-- /TOC -->
 
@@ -15,7 +15,7 @@ A Terraform module refers to a self-contained package of Terraform configuration
 
 ## How do you use this module
 
-This module currently supports only Terraform `0.13`.
+This module currently supports only Terraform `0.14`.
 
 ### Kubernetes cluster provisioning
 
