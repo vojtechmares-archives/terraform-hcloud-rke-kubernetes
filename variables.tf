@@ -35,7 +35,7 @@ variable "load_balancer_type" {
 }
 variable "kubernetes_version" {
   type        = string
-  description = "Version of Kubernetes cluster created by RKE (e.g `v1.19.3-rancher1-1`)"
+  description = "Version of Kubernetes cluster created by RKE (e.g `v1.20.5-rancher1-1`)"
 }
 variable "kubernetes_cluster_name" {
   type        = string
@@ -48,8 +48,4 @@ variable "kubernetes_upgrade_strategy_drain" {
 variable "kubernetes_upgrade_strategy_max_unavailable_workers" {
   type        = string
   description = "Maximum of Kubernetes unavailable workers"
-}
-variable "kubernetes_authorization" {
-  type        = string
-  description = "Authorization method for Kubernetes (`rbac` or `none`)"
 }

@@ -47,7 +47,7 @@ terraform apply
 
 #### Kubernetes version
 
-Version is specified in module's variable `kubernetes_version`, version string looks like following: `v1.19.7-rancher1-1`.
+Version is specified in module's variable `kubernetes_version`, version string looks like following: `v1.20.5-rancher1-1`.
 
 The Rancher distribution of Kubernetes is CNCF certified distribution of Kubernetes. No drawbacks.
 
