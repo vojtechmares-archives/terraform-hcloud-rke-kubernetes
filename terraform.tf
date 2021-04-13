@@ -42,28 +42,8 @@ variable "kubernetes_upgrade_strategy_max_unavailable_workers" {
   description = "Maximum of Kubernetes unavailable workers"
 }
 
-variable "kubernetes_cluster_cidr" {
-  type    = string
-  default = "10.42.0.0/16"
-}
-
-variable "kubernetes_service_cluster_ip_range" {
-  type    = string
-  default = "10.43.0.0/16"
-}
-
-variable "kubernetes_cluster_dns_server" {
-  type    = string
-  default = "10.43.0.10"
-}
-
 variable "network_zone" {
   type = string
-}
-
-variable "network_ip_range" {
-  type    = string
-  default = "10.0.0.0/8"
 }
 
 output "load_balancer_ipv4" {
