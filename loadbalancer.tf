@@ -1,10 +1,10 @@
 resource "hcloud_load_balancer" "lb" {
   name               = "lb"
-  load_balancer_type = var.load_balancer_type
+  load_balancer_type = var.lb_type
   location           = var.location
 }
 
-resource "hcloud_load_balancer_target" "lb-targets" {
+resource "hcloud_load_balancer_target" "lb_targets" {
   type             = "server"
   load_balancer_id = hcloud_load_balancer.lb.id
 
