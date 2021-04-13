@@ -1,14 +1,9 @@
 resource "hcloud_server" "nodes" {
   count       = var.node_count
-  name        = "node-${count.index + 1}"
-  image       = var.node_image
+  name        = "cl${var.kubernetes_cluster_name}no${count.index + 1}"
+  image       = "ubuntu-20.04"
   server_type = var.node_type
   location    = var.location
-  ssh_keys    = [hcloud_ssh_key.rke.name]
-  depends_on  = [hcloud_ssh_key.rke]
-  user_data   = data.template_file.docker.rendered
-}
-
-data "template_file" "docker" {
-  template = file("${path.module}/docker-cloud-init.yaml")
+  ssh_keys    = var.ssh_key_ids
+  user_data   = templatefile("${path.module}/cloud-config.yml")
 }
